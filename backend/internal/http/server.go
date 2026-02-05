@@ -43,6 +43,14 @@ func (s *Server) Start() {
 		s.listSessions(w, r)
 	})
 	
+	http.HandleFunc("/session/delete", func(w http.ResponseWriter, r *http.Request) {
+		if r.Method != http.MethodPost {
+			http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
+			return
+		}
+		s.deleteSession(w, r)
+	})
+	
 	http.HandleFunc("/devices", func(w http.ResponseWriter, r *http.Request) {
 		if r.Method != http.MethodGet {
 			http.Error(w, "Method not allowed", http.StatusMethodNotAllowed)
