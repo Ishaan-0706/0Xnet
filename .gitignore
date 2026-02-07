@@ -1,0 +1,26 @@
+# Binaries
+*.exe
+*.out
+*.app
+
+# Go build artifacts
+/bin/
+/obj/
+/vendor/
+
+# Go test cache
+*.test
+
+# Databases
+*.db
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+.vscode/
+.idea/
+
+# Runtime data (DO NOT COMMIT)
+backend/data/
