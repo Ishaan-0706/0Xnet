@@ -1,8 +1,8 @@
 {
-  "name": "hp3",
-  "productname": "hp3",
+  "name": "0xnet",
+  "productname": "0Xnet",
   "version": "1.0.0",
-  "description": "HOME PAGE 3.0",
+  "description": "0Xnet — Offline LAN Connect",
   "main": "main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -28,5 +28,4 @@
   "dependencies": {
     "electron-squirrel-startup": "^1.0.1"
   }
- 
 }

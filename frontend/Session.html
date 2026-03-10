@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="Content-Security-Policy"
-        content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'" />
+    content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self'; connect-src 'self' http://localhost:8080 ws://localhost:8080" />
   <title>OXNET — Session</title>
-  <link rel="stylesheet" href="session.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Session.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
 </head>
+
 <body>
 
   <!-- ╔══════════════════════╗
@@ -134,12 +138,14 @@
         <div class="file-list" id="fileList">
           <div class="file-row">
             <span class="ficon">📄</span>
-            <div class="finfo"><span class="fname">project_brief.pdf</span><span class="fmeta">alex_dev · 2.4 MB</span></div>
+            <div class="finfo"><span class="fname">project_brief.pdf</span><span class="fmeta">alex_dev · 2.4 MB</span>
+            </div>
             <button class="fdl">↓</button>
           </div>
           <div class="file-row">
             <span class="ficon">🖼</span>
-            <div class="finfo"><span class="fname">wireframe_v2.png</span><span class="fmeta">maya_k · 840 KB</span></div>
+            <div class="finfo"><span class="fname">wireframe_v2.png</span><span class="fmeta">maya_k · 840 KB</span>
+            </div>
             <button class="fdl">↓</button>
           </div>
         </div>
@@ -296,6 +302,7 @@
     </div>
   </div>
 
-  <script src="session.js"></script>
+  <script src="Session.js"></script>
 </body>
+
 </html>

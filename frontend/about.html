@@ -1,131 +1,167 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About | 0Xnet</title>
-
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
 
   <style>
-    :root {
-      --lightest: #CBC9CC;
-      --light-purple: #9C90AA;
-      --mid-purple: #6E6189;
-      --medium-dark: #443A67;
-      --dark-navy: #211E46;
-      --very-dark: #0A0B24;
-      --near-black: #000003;
-    }
-
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: 'Sora', sans-serif;
-    }
-
     body {
-      background: var(--near-black);
-      color: var(--lightest);
-      line-height: 2;
-      padding: 60px 8%;
+      overflow-y: auto;
+      padding: 0;
     }
 
-    /* NAVBAR */
-    .navbar {
-      position: relative;
-      padding: 1.3rem 3rem;
-      background: rgba(0,0,3,0.88);
-      border-bottom: 1px solid rgba(110,97,137,0.15);
-      margin-bottom: 50px;
+    .about-page {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem 4rem;
     }
 
-    /* 🔥 Logo slightly bigger */
-    .logo {
-      font-size: 2rem;
+    .about-hero {
+      text-align: center;
+      padding: 4rem 1rem 3rem;
+      animation: fadeUp 0.7s ease 0.2s both;
+    }
+
+    .about-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.5rem, 8vw, 4.5rem);
       font-weight: 700;
-      text-decoration: none;
-      color: var(--lightest);
-      letter-spacing: 0.08em;
+      color: var(--c1);
+      margin-bottom: 0.6rem;
+      letter-spacing: -0.02em;
     }
 
-    .logo span {
-      color: var(--mid-purple);
+    .about-hero h1 span {
+      color: var(--c3);
     }
 
-    /* SECTIONS */
-    .section-box {
-      border: 1px solid var(--mid-purple);
-      padding: 30px;
-      margin-bottom: 60px;
-      background: var(--very-dark);
+    .about-hero .about-tagline {
+      font-size: 1.1rem;
+      color: var(--c2);
+      line-height: 1.8;
+      max-width: 550px;
+      margin: 0 auto 1rem;
+      font-weight: 300;
     }
 
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 20px;
+    .about-section-box {
+      background: var(--c6);
+      border: 1px solid rgba(110, 97, 137, 0.15);
+      border-radius: 18px;
+      padding: 2.2rem;
+      margin-bottom: 2rem;
+      animation: fadeUp 0.7s ease 0.4s both;
     }
 
-    h2 {
-      font-size: 2.5rem;
-      color: var(--light-purple);
+    .about-section-box h2 {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      font-weight: 700;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--c2);
+      margin-bottom: 1rem;
     }
 
-    .intro-text {
-      max-width: 800px;
-      font-size: 1.2rem;
+    .about-section-box p {
+      font-size: 0.95rem;
+      color: var(--c2);
+      line-height: 1.8;
+      font-weight: 300;
     }
 
-    .tagline {
-      font-size: 3rem;
-      line-height: 1.3;
+    .about-quote {
+      text-align: center;
+      padding: 2rem;
+      animation: fadeUp 0.7s ease 0.5s both;
     }
 
-    .tagline span {
-      color: var(--mid-purple);
+    .about-quote h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 4vw, 2.2rem);
+      font-weight: 700;
+      color: var(--c1);
+      line-height: 1.4;
     }
 
-    /* FEATURES */
-    .features {
+    .about-quote h2 span {
+      color: var(--c3);
+    }
+
+    /* Features grid */
+    .features-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+      gap: 1rem;
+      animation: fadeUp 0.7s ease 0.6s both;
     }
 
     .feature-card {
-      background: var(--dark-navy);
-      border: 1px solid var(--medium-dark);
-      padding: 25px;
-      transition: 0.3s ease;
+      background: var(--c6);
+      border: 1px solid rgba(110, 97, 137, 0.12);
+      border-radius: 16px;
+      padding: 1.6rem;
+      transition: all 0.25s ease;
     }
 
     .feature-card:hover {
-      background: var(--medium-dark);
-      transform: translateY(-5px);
+      border-color: rgba(110, 97, 137, 0.3);
+      transform: translateY(-3px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-icon {
+      font-size: 1.5rem;
+      margin-bottom: 0.7rem;
+      color: var(--c3);
     }
 
     .feature-card h3 {
-      margin-bottom: 15px;
-      color: var(--light-purple);
-      font-size: 1.2rem;
+      font-family: var(--font-display);
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--c1);
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
     }
 
     .feature-card p {
-      font-size: 0.95rem;
+      font-size: 0.82rem;
+      color: var(--c2);
+      line-height: 1.6;
+      font-weight: 300;
     }
 
-    footer {
-      margin-top: 60px;
+    .about-footer {
       text-align: center;
-      color: var(--light-purple);
-      font-size: 0.9rem;
+      margin-top: 3rem;
+      padding: 1.5rem;
+      border-top: 1px solid rgba(110, 97, 137, 0.1);
+      animation: fadeUp 0.7s ease 0.7s both;
     }
 
-    @media (max-width: 768px) {
-      h1 { font-size: 2.2rem; }
-      h2 { font-size: 1.8rem; }
-      .tagline { font-size: 2rem; }
+    .about-footer p {
+      font-family: var(--font-display);
+      font-size: 0.7rem;
+      color: var(--c4);
+      letter-spacing: 0.08em;
+    }
+
+    @media (max-width: 640px) {
+      .about-page {
+        padding: 1rem 1rem 3rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -137,57 +173,78 @@
     <a href="index.html" class="logo">OX<span>NET</span></a>
   </nav>
 
-  <!-- INTRO -->
-  <div class="section-box">
-    <h1>INTRODUCTION</h1>
-    <p class="intro-text">
-      0Xnet is a decentralized networking platform built for seamless connectivity 
-      and secure communication over LAN. Designed for speed, reliability, and privacy —
-      making collaboration faster, smarter, and truly efficient.
-    </p>
+  <div class="about-page">
+
+    <!-- HERO -->
+    <div class="about-hero">
+      <h1>OX<span>NET</span></h1>
+      <p class="about-tagline">
+        A decentralized networking platform built for seamless connectivity
+        and secure communication over LAN. Designed for speed, reliability,
+        and privacy.
+      </p>
+    </div>
+
+    <!-- INTRODUCTION -->
+    <div class="about-section-box">
+      <h2>Introduction</h2>
+      <p>
+        0Xnet enables devices on a local area network to discover each other,
+        establish secure sessions, and collaborate — all without an internet
+        connection. Whether you're sharing files, chatting, or streaming video,
+        everything stays on your LAN.
+      </p>
+    </div>
+
+    <!-- TAGLINE -->
+    <div class="about-quote">
+      <h2>
+        One platform.<br />
+        <span>Endless ways to work together.</span>
+      </h2>
+    </div>
+
+    <!-- FEATURES -->
+    <div class="features-grid">
+
+      <div class="feature-card">
+        <div class="feature-icon">◉</div>
+        <h3>Zero Internet</h3>
+        <p>Works entirely without an internet connection.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">◈</div>
+        <h3>Chat</h3>
+        <p>Fast, secure encrypted chat rooms.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">▶</div>
+        <h3>Video Stream</h3>
+        <p>Smooth video streaming across LAN.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">⊹</div>
+        <h3>Video Call</h3>
+        <p>Low latency encrypted video calls.</p>
+      </div>
+
+      <div class="feature-card">
+        <div class="feature-icon">⊞</div>
+        <h3>File Transfer</h3>
+        <p>Share files instantly over local network.</p>
+      </div>
+
+    </div>
+
+    <div class="about-footer">
+      <p>© 2026 0Xnet — Built for secure local collaboration</p>
+    </div>
+
   </div>
-
-  <!-- TAGLINE -->
-  <div class="section-box">
-    <h2 class="tagline">
-      One platform.<br />
-      <span>Endless ways to work together.</span>
-    </h2>
-  </div>
-
-  <!-- FEATURES -->
-  <div class="features">
-
-    <div class="feature-card">
-      <h3>Zero Internet</h3>
-      <p>Works entirely without an internet connection.</p>
-    </div>
-
-    <div class="feature-card">
-      <h3>Chat</h3>
-      <p>Fast, secure encrypted chat rooms.</p>
-    </div>
-
-    <div class="feature-card">
-      <h3>Video Stream</h3>
-      <p>Smooth video streaming across LAN.</p>
-    </div>
-
-    <div class="feature-card">
-      <h3>Video Call</h3>
-      <p>Low latency encrypted video calls.</p>
-    </div>
-
-    <div class="feature-card">
-      <h3>File Transfer</h3>
-      <p>Share files instantly over local network.</p>
-    </div>
-
-  </div>
-
-  <footer>
-    © 2026 0Xnet. Built for secure local collaboration.
-  </footer>
 
 </body>
+
 </html>

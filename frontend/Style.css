@@ -1286,6 +1286,61 @@ body {
 }
 
 /* =====================
+   EMPTY STATE
+===================== */
+.empty-state {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  animation: fadeUp 0.5s ease both;
+}
+
+.empty-icon {
+  font-size: 2.5rem;
+  color: var(--c4);
+  margin-bottom: 0.8rem;
+}
+
+.empty-title {
+  font-family: var(--font-display);
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: var(--c2);
+  margin-bottom: 0.4rem;
+}
+
+.empty-sub {
+  font-size: 0.8rem;
+  color: var(--c3);
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+/* =====================
+   LOADING SKELETON
+===================== */
+.loading-skeleton {
+  pointer-events: none;
+}
+
+.skeleton-text {
+  color: var(--c4) !important;
+  animation: shimmer 1.8s ease infinite;
+}
+
+@keyframes shimmer {
+  0%, 100% { opacity: 0.4; }
+  50%       { opacity: 0.8; }
+}
+
+/* =====================
+   UTILITY
+===================== */
+.hidden {
+  display: none !important;
+}
+
+/* =====================
 ===================== */
 @media (max-width: 640px) {
   .navbar { padding: 1rem 1.2rem; }

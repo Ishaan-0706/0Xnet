@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
     camOn = !camOn;
     btnCamera.classList.toggle('active', camOn);
     btnCamera.classList.toggle('off',    !camOn);
-    camIcon.textContent = camOn ? '📷' : '📷';
+    camIcon.textContent = camOn ? '📷' : '🚫';
     toast(camOn ? 'Camera on' : 'Camera off');
   });
 

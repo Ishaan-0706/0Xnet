@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>OXNET — Offline LAN Connect</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="Style.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@300;400;600;700&display=swap"
+    rel="stylesheet" />
 </head>
+
 <body>
 
   <!-- NAVBAR -->
@@ -29,7 +33,8 @@
           <div class="profile-dropdown-edit">
             <label class="profile-edit-label">Username</label>
             <div class="profile-edit-row">
-              <input type="text" class="profile-name-input" id="profileNameInput" value="Anonymous" maxlength="24" spellcheck="false" />
+              <input type="text" class="profile-name-input" id="profileNameInput" value="Anonymous" maxlength="24"
+                spellcheck="false" />
               <button class="profile-save-btn" id="profileSaveBtn" title="Save">✓</button>
             </div>
           </div>
@@ -67,7 +72,7 @@
             <span class="pdl-text">Settings</span>
             <span class="pdl-arrow">→</span>
           </a>
-<a href="about.html" class="profile-dropdown-link">
+          <a href="about.html" class="profile-dropdown-link">
             <span class="pdl-icon">◎</span>
             <span class="pdl-text">About</span>
             <span class="pdl-arrow">→</span>
@@ -226,135 +231,24 @@
         <div class="sessions-scroll-wrap" id="sessionsScrollWrap">
           <div class="sessions-banner" id="sessionsGrid">
 
-            <div class="session-row" data-session="1">
+            <!-- Loading skeleton shown while fetching -->
+            <div class="session-row loading-skeleton" id="sessionsLoading">
               <div class="session-indicator"></div>
               <div class="session-main-info">
-                <span class="session-name">Team Alpha</span>
-                <span class="session-host">Host: alex_dev</span>
+                <span class="session-name skeleton-text">Loading sessions…</span>
+                <span class="session-host skeleton-text">Scanning LAN</span>
               </div>
-              <div class="session-divider"></div>
-              <div class="session-users">
-                <span class="session-users-icon">⊹</span>
-                <span class="session-users-count">3 users</span>
-              </div>
-              <button class="btn-join">Join →</button>
-            </div>
-
-            <div class="session-row" data-session="2">
-              <div class="session-indicator"></div>
-              <div class="session-main-info">
-                <span class="session-name">Project Nexus</span>
-                <span class="session-host">Host: maya_k</span>
-              </div>
-              <div class="session-divider"></div>
-              <div class="session-users">
-                <span class="session-users-icon">⊹</span>
-                <span class="session-users-count">1 user</span>
-              </div>
-              <button class="btn-join">Join →</button>
-            </div>
-
-            <div class="session-row" data-session="3">
-              <div class="session-indicator"></div>
-              <div class="session-main-info">
-                <span class="session-name">LAN Party #7</span>
-                <span class="session-host">Host: rx_ghost</span>
-              </div>
-              <div class="session-divider"></div>
-              <div class="session-users">
-                <span class="session-users-icon">⊹</span>
-                <span class="session-users-count">8 users</span>
-              </div>
-              <button class="btn-join">Join →</button>
-            </div>
-
-            <div class="session-row" data-session="4">
-              <div class="session-indicator"></div>
-              <div class="session-main-info">
-                <span class="session-name">Dev Sync</span>
-                <span class="session-host">Host: zara_sys</span>
-              </div>
-              <div class="session-divider"></div>
-              <div class="session-users">
-                <span class="session-users-icon">⊹</span>
-                <span class="session-users-count">5 users</span>
-              </div>
-              <button class="btn-join">Join →</button>
-            </div>
-
-            <!-- Extra sessions (shown after View More) -->
-            <div class="session-row extra-session" data-session="5">
-              <div class="session-indicator"></div>
-              <div class="session-main-info">
-                <span class="session-name">Mesh Node B</span>
-                <span class="session-host">Host: netrunner</span>
-              </div>
-              <div class="session-divider"></div>
-              <div class="session-users">
-                <span class="session-users-icon">⊹</span>
-                <span class="session-users-count">2 users</span>
-              </div>
-              <button class="btn-join">Join →</button>
-            </div>
-
-            <div class="session-row extra-session" data-session="6">
-              <div class="session-indicator"></div>
-              <div class="session-main-info">
-                <span class="session-name">Ops Room</span>
-                <span class="session-host">Host: t_minus</span>
-              </div>
-              <div class="session-divider"></div>
-              <div class="session-users">
-                <span class="session-users-icon">⊹</span>
-                <span class="session-users-count">4 users</span>
-              </div>
-              <button class="btn-join">Join →</button>
-            </div>
-
-            <div class="session-row extra-session" data-session="7">
-              <div class="session-indicator"></div>
-              <div class="session-main-info">
-                <span class="session-name">Beacon Hub</span>
-                <span class="session-host">Host: vox_lan</span>
-              </div>
-              <div class="session-divider"></div>
-              <div class="session-users">
-                <span class="session-users-icon">⊹</span>
-                <span class="session-users-count">7 users</span>
-              </div>
-              <button class="btn-join">Join →</button>
-            </div>
-
-            <div class="session-row extra-session" data-session="8">
-              <div class="session-indicator"></div>
-              <div class="session-main-info">
-                <span class="session-name">Silent Wire</span>
-                <span class="session-host">Host: null_ptr</span>
-              </div>
-              <div class="session-divider"></div>
-              <div class="session-users">
-                <span class="session-users-icon">⊹</span>
-                <span class="session-users-count">2 users</span>
-              </div>
-              <button class="btn-join">Join →</button>
-            </div>
-
-            <div class="session-row extra-session" data-session="9">
-              <div class="session-indicator"></div>
-              <div class="session-main-info">
-                <span class="session-name">Grid Zero</span>
-                <span class="session-host">Host: dr_packet</span>
-              </div>
-              <div class="session-divider"></div>
-              <div class="session-users">
-                <span class="session-users-icon">⊹</span>
-                <span class="session-users-count">4 users</span>
-              </div>
-              <button class="btn-join">Join →</button>
             </div>
 
           </div>
           <div class="sessions-fade" id="sessionsFade"></div>
+        </div>
+
+        <!-- Empty state (hidden by default) -->
+        <div class="empty-state hidden" id="sessionsEmpty">
+          <div class="empty-icon">⊹</div>
+          <p class="empty-title">No Sessions Found</p>
+          <p class="empty-sub">Create a session to get started, or wait for others on the LAN.</p>
         </div>
 
         <div class="sessions-view-more">
@@ -366,24 +260,27 @@
 
       </section>
 
-  <!-- CREATE SESSION MODAL -->
-  <div class="modal-overlay" id="modalOverlay">
-    <div class="modal">
-      <button class="modal-close" id="modalClose">✕</button>
-      <h2>Create New Session</h2>
-      <p>Start a new offline session on your LAN.</p>
-      <div class="modal-field">
-        <label>Session Name</label>
-        <input type="text" placeholder="e.g. Team Alpha" />
-      </div>
-      <div class="modal-field">
-        <label>Max Devices</label>
-        <input type="number" placeholder="8" min="2" max="32" />
-      </div>
-      <button class="btn-create-modal">Launch Session</button>
-    </div>
-  </div>
+    </main>
 
-  <script src="Script.js"></script>
+    <!-- CREATE SESSION MODAL -->
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+        <button class="modal-close" id="modalClose">✕</button>
+        <h2>Create New Session</h2>
+        <p>Start a new offline session on your LAN.</p>
+        <div class="modal-field">
+          <label for="sessionNameInput">Session Name</label>
+          <input type="text" id="sessionNameInput" placeholder="e.g. Team Alpha" />
+        </div>
+        <div class="modal-field">
+          <label for="maxDevicesInput">Max Devices</label>
+          <input type="number" id="maxDevicesInput" placeholder="8" min="2" max="32" />
+        </div>
+        <button class="btn-create-modal" id="launchSessionBtn">Launch Session</button>
+      </div>
+    </div>
+
+    <script src="Script.js"></script>
 </body>
+
 </html>
